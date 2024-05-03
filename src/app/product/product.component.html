@@ -1,0 +1,46 @@
+<div>
+    <h2>Lista de Produtos</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Id</th>
+        <th>Ações</th>
+      </tr>
+      <tr *ngFor="let product of getFilteredProducts()">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.id }}</td>
+        <td>
+          <button class="btEditar" (click)="editProduct(product)">Editar</button>
+          <button class="btExcluir" (click)="deleteProduct(product.id)">Excluir</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Adicionar Produto</h2>
+  
+    <form class="lista" (submit)="addProduct()">
+      <label class="listaTitulo" for="nome">Nome</label>
+      <input type="text" name="name" [(ngModel)]="newProduct.name">
+      <label class="listaTitulo" for="preço">Preço</label>
+      <input type="number" name="price" [(ngModel)]="newProduct.price">
+      <label class="listaTitulo" for="quantidade">Quantidade</label>
+      <input type="number" name="quantity" [(ngModel)]="newProduct.quantity">
+      <button class="btAdd" type="submit">Adicionar</button>
+    </form>
+</div>
+
+<div *ngIf="editingProduct">
+    <h2>Editar Produto</h2>
+    <form (submit)="updateProduct()">
+      <input type="text" name="name" [(ngModel)]="editingProduct.name">
+      <input type="number" name="price" [(ngModel)]="editingProduct.price">
+      <input type="number" name="quantity" [(ngModel)]="editingProduct.quantity">
+      <button type="submit">Salvar</button>
+    </form>
+</div>

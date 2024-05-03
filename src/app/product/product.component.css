@@ -1,0 +1,46 @@
+.listaTitulo{
+    width: 10vw;
+    margin: 3px;
+    display: 0;
+    justify-content: space-around;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 8px; 
+}
+  
+.btEditar{
+    background-color: rgba(186, 247, 226, 0.808);
+    border: none;
+}
+
+.btEditar:hover{
+    background-color: rgba(117, 247, 201, 0.808);
+    
+}
+
+.btExcluir{
+    background-color: rgba(252, 145, 145, 0.808);
+    border: none;
+}
+
+.btExcluir:hover{
+    background-color: rgba(250, 66, 66, 0.808);
+    
+}
+
+.btAdd{
+    background-color: rgba(183, 213, 247, 0.808);
+    border: none;
+    margin-top: 5px;
+}
+
+.btAdd:hover{
+    background-color: rgba(124, 185, 255, 0.808);
+    
+}

@@ -1,0 +1,21 @@
+.header{
+    background-color: red;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    width: 8vw;
+    height: 3vh;
+}
+.searching{
+    display: flex;
+    width: 35vw;
+    height: 3vh;
+    margin-left: 15px;
+}
+h2{
+    margin-left: 15px;
+    color: white;
+}
