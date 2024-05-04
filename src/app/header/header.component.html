@@ -1,9 +1,13 @@
 <header class="header">
     <div class="search-container">
         <h2>Encontre seu produto!</h2>  
-        <form class="searching">
-            <input type="text" placeholder="buscar..." (input)="search($event)"/>
+        <form class="btBusca" >
+            <input type="text" [(ngModel)]="searchText" (input)="searchProducts()" placeholder="Buscar por nome">
             <button type="submit">Buscar</button>
+            <button type="button" (click)="clearSearch()">Limpar</button>
+                        
         </form>
     </div>
+    
 </header>
+

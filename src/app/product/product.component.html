@@ -1,3 +1,5 @@
+
+
 <div>
     <h2>Lista de Produtos</h2>
     <table>
@@ -37,10 +39,10 @@
 
 <div *ngIf="editingProduct">
     <h2>Editar Produto</h2>
-    <form (submit)="updateProduct()">
+    <form class="btBusca" (submit)="updateProduct()">
       <input type="text" name="name" [(ngModel)]="editingProduct.name">
       <input type="number" name="price" [(ngModel)]="editingProduct.price">
       <input type="number" name="quantity" [(ngModel)]="editingProduct.quantity">
-      <button type="submit">Salvar</button>
+      <button  type="submit">Salvar</button>
     </form>
 </div>

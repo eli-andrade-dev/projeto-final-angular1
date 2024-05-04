@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+table, form{
+    background-color: rgba(255, 228, 196, 0.555);
+    margin-left: 15px;
+}
+
+h2{
+    margin-left: 15px;
+}
+
+.btBusca{
+    background-color: transparent;
+}
