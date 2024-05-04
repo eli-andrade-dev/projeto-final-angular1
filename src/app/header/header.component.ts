@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  search(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
 
+    this.search = this.search.bind(this);
+
+  }
 }

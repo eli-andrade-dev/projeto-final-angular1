@@ -28,11 +28,6 @@ export class ProductComponent implements OnInit {
       { id: 3, name: 'Mochila', price: 30.99, quantity: 15 },
     ];
   }
-  getFilteredProducts(): Product[] {
-    return this.products.filter(product =>
-    product.name.toLowerCase().includes(this.searchText.toLowerCase())
-  );
-}
 
  addProduct(): void {
    console.log("Adicionando produto:", this.newProduct);
@@ -44,13 +39,10 @@ export class ProductComponent implements OnInit {
    }
  }
   
-
-
   editProduct(product: Product): void {
     this.editingProduct = product;
   }
 
-// No método updateProduct(), você pode simplificar a lógica assim:
 updateProduct(): void {
   const index = this.products.findIndex(p => p.id === this.editingProduct!.id);
   if (index !== -1) {
@@ -59,9 +51,7 @@ updateProduct(): void {
   }
 }
 
-
   deleteProduct(id: number): void {
     this.products = this.products.filter(p => p.id !== id);
   }
 }
-

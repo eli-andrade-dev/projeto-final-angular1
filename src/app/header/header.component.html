@@ -2,7 +2,7 @@
     <div class="search-container">
         <h2>Encontre seu produto!</h2>  
         <form class="searching">
-            <input type="text" placeholder="buscar...">
+            <input type="text" placeholder="buscar..." (input)="search($event)"/>
             <button type="submit">Buscar</button>
         </form>
     </div>
